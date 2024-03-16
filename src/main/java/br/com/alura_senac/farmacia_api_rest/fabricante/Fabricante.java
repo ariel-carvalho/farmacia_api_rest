@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 
 @Entity
-@Table(name = "produtos")
+@Table(name = "fabricantes")
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
@@ -21,4 +21,9 @@ public class Fabricante
     String nome;
     @OneToMany(mappedBy = "fabricante")
     private List<Produto> produto;
+
+    public Fabricante(DadosCadastroFabricante dadosCadastroFabricante)
+    {
+        this.nome = dadosCadastroFabricante.nome();
+    }
 }
