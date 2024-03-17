@@ -42,4 +42,10 @@ public class ProdutoController
         var produto = produtoRepository.getReferenceById(dadosAtualizacaoProduto.id());
         produto.atualizarInformacoes(dadosAtualizacaoProduto);
     }
+
+    @DeleteMapping("/{id}")
+    public void excluir(@PathVariable Long id)
+    {
+        produtoRepository.deleteById(id);
+    }
 }
