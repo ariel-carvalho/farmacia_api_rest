@@ -1,12 +1,12 @@
-package br.com.alura_senac.farmacia_api_rest.fabricante;
+package br.com.alura_senac.farmacia_api_rest.modelo;
 
-import br.com.alura_senac.farmacia_api_rest.produto.Produto;
+import br.com.alura_senac.farmacia_api_rest.DTO.DadosCadastroFabricante;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-
 import java.util.List;
+
 
 @Entity
 @Table(name = "fabricantes")

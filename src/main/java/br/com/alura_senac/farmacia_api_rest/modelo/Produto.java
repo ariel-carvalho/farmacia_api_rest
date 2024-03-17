@@ -1,8 +1,10 @@
-package br.com.alura_senac.farmacia_api_rest.produto;
+package br.com.alura_senac.farmacia_api_rest.modelo;
 
-import br.com.alura_senac.farmacia_api_rest.fabricante.Fabricante;
+import br.com.alura_senac.farmacia_api_rest.DTO.DadosCadastroFabricante;
+import br.com.alura_senac.farmacia_api_rest.DTO.DadosCadastroProduto;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -11,6 +13,7 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode
 public class Produto
 {
     @Id

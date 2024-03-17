@@ -2,6 +2,8 @@ package br.com.alura_senac.farmacia_api_rest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
 
 @SpringBootApplication
 public class FarmaciaApiRestApplication
@@ -11,5 +13,4 @@ public class FarmaciaApiRestApplication
 		SpringApplication.run(FarmaciaApiRestApplication.class, args);
 	}
 }
-
 

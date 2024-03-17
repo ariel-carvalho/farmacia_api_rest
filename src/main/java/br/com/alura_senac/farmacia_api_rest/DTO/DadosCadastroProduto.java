@@ -1,7 +1,6 @@
-package br.com.alura_senac.farmacia_api_rest.produto;
+package br.com.alura_senac.farmacia_api_rest.DTO;
 
-
-import br.com.alura_senac.farmacia_api_rest.fabricante.DadosCadastroFabricante;
+import br.com.alura_senac.farmacia_api_rest.modelo.Fabricante;
 
 public record DadosCadastroProduto
         (

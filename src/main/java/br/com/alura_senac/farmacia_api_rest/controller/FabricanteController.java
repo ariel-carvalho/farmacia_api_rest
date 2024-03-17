@@ -1,13 +1,13 @@
 package br.com.alura_senac.farmacia_api_rest.controller;
 
-import br.com.alura_senac.farmacia_api_rest.fabricante.DadosCadastroFabricante;
-import br.com.alura_senac.farmacia_api_rest.fabricante.Fabricante;
-import br.com.alura_senac.farmacia_api_rest.fabricante.FabricanteRepository;
+import br.com.alura_senac.farmacia_api_rest.DTO.DadosCadastroFabricante;
+import br.com.alura_senac.farmacia_api_rest.DTO.DadosCadastroProduto;
+import br.com.alura_senac.farmacia_api_rest.repository.FabricanteRepository;
+import br.com.alura_senac.farmacia_api_rest.modelo.Fabricante;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.*;
+import java.util.List;
 
 @RestController
 @RequestMapping("fabricantes")
@@ -17,6 +17,7 @@ public class FabricanteController
     private FabricanteRepository fabricanteRepository;
 
     @PostMapping
+    @Transactional
     public void cadastrarFabricante(@RequestBody DadosCadastroFabricante dadosCadastroFabricante)
     {
         fabricanteRepository.save(new Fabricante(dadosCadastroFabricante));
