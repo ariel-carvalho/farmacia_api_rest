@@ -1,5 +1,6 @@
 package br.com.alura_senac.farmacia_api_rest.modelo;
 
+import br.com.alura_senac.farmacia_api_rest.DTO.DadosAtualizacaoProduto;
 import br.com.alura_senac.farmacia_api_rest.DTO.DadosCadastroFabricante;
 import br.com.alura_senac.farmacia_api_rest.DTO.DadosCadastroProduto;
 import jakarta.persistence.*;
@@ -31,5 +32,13 @@ public class Produto
         this.descricao = dadosCadastroProduto.descricao();
         this.preco = dadosCadastroProduto.preco();
         this.fabricante = new Fabricante(dadosCadastroProduto.dadosCadastroFabricante());
+    }
+
+    public void atualizarInformacoes(DadosAtualizacaoProduto dadosAtualizacaoProduto)
+    {
+        if (dadosAtualizacaoProduto.descricao() != null)
+        {
+            this.descricao = dadosAtualizacaoProduto.descricao();
+        }
     }
 }
